@@ -7,8 +7,11 @@ export {
 
 event syslog_message(c: connection, facility: count, severity: count, msg: string)
     {
-    if ( !c$syslog?$community_id && c?$community_id )
-        c$syslog$community_id = c$community_id;
+    if ( c?$syslog )
+        {
+        if ( !c$syslog?$community_id && c?$community_id )
+            c$syslog$community_id = c$community_id;
+        }
     }
 
 @endif

@@ -8,13 +8,19 @@ export {
 
 event socks_reply(c: connection, version: count, reply: count, sa: SOCKS::Address, p: port)
     {
-    if ( ! c$socks?$community_id && c?$community_id )
-        c$socks$community_id = c$community_id;
+    if ( c?$socks )
+        {
+        if ( ! c$socks?$community_id && c?$community_id )
+            c$socks$community_id = c$community_id;
+        }
     }
 
 event socks_request(c: connection, version: count, request_type: count, sa: SOCKS::Address, p: port, user: string)
     {
-    if ( ! c$socks?$community_id && c?$community_id )
-        c$socks$community_id = c$community_id;
+    if ( c?$socks )
+        {
+        if ( ! c$socks?$community_id && c?$community_id )
+            c$socks$community_id = c$community_id;
+        }
     }
 @endif

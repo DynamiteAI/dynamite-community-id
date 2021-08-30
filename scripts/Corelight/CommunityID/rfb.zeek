@@ -7,14 +7,20 @@ export {
 
 event rfb_client_version(c: connection, major_version: string, minor_version: string)
     {
-    if ( ! c$rfb?$community_id && c?$community_id )
-        c$rfb$community_id = c$community_id;
+    if ( c?$rfb )
+        {
+        if ( ! c$rfb?$community_id && c?$community_id )
+            c$rfb$community_id = c$community_id;
+        }
     }
 
 event rfb_server_version(c: connection, major_version: string, minor_version: string)
     {
-    if ( ! c$rfb?$community_id && c?$community_id )
-        c$rfb$community_id = c$community_id;
+    if ( c?$rfb )
+        {
+        if ( ! c$rfb?$community_id && c?$community_id )
+            c$rfb$community_id = c$community_id;
+        }
     }
 
 @endif 

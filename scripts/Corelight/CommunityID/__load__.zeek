@@ -22,5 +22,4 @@
 @load ./ssh
 @load ./ssl
 @load ./syslog
-@load ./tunnel
 @endif

@@ -8,8 +8,11 @@ export {
 
 event radius_message(c: connection, result: RADIUS::Message)
     {
-    if ( ! c$radius?$community_id && c?$community_id )
-        c$radius$community_id = c$community_id;
+    if ( c?$radius )
+        {
+        if ( ! c$radius?$community_id && c?$community_id )
+            c$radius$community_id = c$community_id;
+        }
     }
 
 @endif

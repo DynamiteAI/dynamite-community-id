@@ -7,7 +7,10 @@ export {
 
 event ntp_message(c: connection, is_orig: bool, msg: NTP::Message)
     {
-    if ( ! c$ntp?$community_id && c?$community_id )
-        c$ntp$community_id = c$community_id; 
+    if ( c?$ntp )
+        {
+        if ( ! c$ntp?$community_id && c?$community_id )
+            c$ntp$community_id = c$community_id; 
+        }
     }
 @endif

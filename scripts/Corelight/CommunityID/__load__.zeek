@@ -1,7 +1,6 @@
 @ifdef (CommunityID::hash_conn)
 @load ./connection
 @load ./dce_rpc
-#@load ./dhcp
 @load ./dnp3
 @load ./dns
 @load ./ftp
@@ -23,5 +22,4 @@
 @load ./ssh
 @load ./ssl
 @load ./syslog
-@load ./tunnel
 @endif

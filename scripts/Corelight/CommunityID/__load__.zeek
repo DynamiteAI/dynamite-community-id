@@ -3,6 +3,7 @@
 @load ./dce_rpc
 @load ./dnp3
 @load ./dns
+@load ./files
 @load ./ftp
 @load ./http
 @load ./irc
